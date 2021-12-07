@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Nav from "./Containers/Nav/Nav";
+import Home from "./views/Home";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Home
+    <div>
+      <BrowserRouter>
+        <Nav/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
